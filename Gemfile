@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+#Preparation for Heroku
+
+ruby '2.2.3'
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -35,6 +41,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :development do
@@ -46,3 +54,10 @@ group :development do
 end
 
 gem 'rspec-rails', group: [ :test ]
+
+#front-end installation
+
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'font-awesome-sass', '~> 4.2.0'
+gem 'simple_form'
+gem "autoprefixer-rails"
